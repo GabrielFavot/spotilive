@@ -9,6 +9,9 @@
     >
       <TrackElement :track="item.track" />
     </li>
+    <div class="flex justify-center items-center text-white border-spotify-gray w-full border-dashed border-2 group hover:cursor-pointer duration-500 hover:scale-105">
+      <Icon class="text-spotify-gray group-hover:text-spotify-lightgray text-[40px]" name="ep:more" />
+    </div>
   </ul>
 </template>
 
