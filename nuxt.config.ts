@@ -27,20 +27,21 @@ export default defineNuxtConfig({
     experimental: {
       tasks: true,
     },
-    devStorage: {
-      spotify: {
-        driver: 'fs',
-        base: '.nuxt/.data',
-      },
-      cache: {
-        driver: 'memory',
-      },
-    },
+    // devStorage: {
+    //   spotify: {
+    //     driver: 'fs',
+    //     base: '.nuxt/.data',
+    //   },
+    //   cache: {
+    //     driver: 'memory',
+    //   },
+    // },
     storage: {
       spotify: {
         driver: 'netlifyBlobs',
         name: 'spotify-grid',
-        siteID: process.env.NETLIFY_SITE_ID,
+        deployScoped: true,
+        siteID: process.env.SITE_ID,
         token: process.env.NETLIFY_API_TOKEN,
       },
       cache: {

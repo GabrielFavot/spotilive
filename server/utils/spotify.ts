@@ -5,6 +5,8 @@ const storageKey = 'spotify_access_token';
 export async function useSpotify() {
   const { clientId, clientSecret } = useRuntimeConfig().spotify;
 
+  console.log(process.env);
+
   const storage = useStorage();
   const accessToken = await getCachedAccessToken();
 
